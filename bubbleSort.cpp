@@ -7,10 +7,17 @@ void bubbleSort(vector<int> &input) {
     int size = input.size();
 
     for (int step=0; step<size-1; step++) {
+        bool isSorted = true;
+
         for (int i=0; i<size-step-1; i++) {
             if (input[i] > input[i+1]) {
                 swap(input[i], input[i+1]);
+                isSorted = false;
             }
+        }
+
+        if (isSorted) {
+            break;
         }
     }
 }

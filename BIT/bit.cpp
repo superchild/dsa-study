@@ -52,7 +52,7 @@ class BIT {
 
         // TC: O(logn)
         int rangeSum(int start, int end) {
-            return prefixSum(end) - prefixSum(start);
+            return prefixSum(end) - prefixSum(start-1);
         }
 
         vector<int> bit;    // index always from 1

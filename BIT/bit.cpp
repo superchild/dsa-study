@@ -24,7 +24,7 @@ class BIT {
 
             for (int i=1; i<bit.size(); i++) {
                 int j = next(i);
-                for (j < bit.size()) {
+                if (j < bit.size()) {
                     bit[j] += bit[i];
                 }
             }

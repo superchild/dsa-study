@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <assert.h>
 
 using namespace std;
 
@@ -41,7 +43,9 @@ void printArray(vector<int> &input) {
 
 int main() {
     vector<int> input = {-1, 0, -45, 2, -8, 56, 99, 3, 7};
-    printArray(input);
+    vector<int> expected = input;
+    
     quickSort(input);
-    printArray(input);
+    sort(expected.begin(), expected.end());
+    assert(input == expected);
 }

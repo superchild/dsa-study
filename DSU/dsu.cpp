@@ -39,8 +39,8 @@ class DSU {
 
             // choose minimm as root
             int min_root = min(lhs_root, rhs_root);
-            roots[lhs] = min_root;
-            roots[rhs] = min_root;
+            roots[lhs_root] = min_root;
+            roots[rhs_root] = min_root;
         }
 
         vector<int> roots;  // record the root index of current index

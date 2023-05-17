@@ -41,6 +41,7 @@ class BIT {
 
         // TC: O(logn)
         int prefixSum(int idx) {
+            idx += 1;
             int result = 0;
             while (idx > 0) {
                 result += bit[idx];
